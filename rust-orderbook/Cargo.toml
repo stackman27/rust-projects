@@ -1,0 +1,15 @@
+[package]
+name = "rust-orderbook"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+getset = "0.1"
+crossterm = "0.26.1"
+tui = { package = "ratatui", version = "0.21.0" }
+rand = "0.8.5"
+strum = "0.20"
+strum_macros = "0.20"
+rand_distr = "0.4.3"
