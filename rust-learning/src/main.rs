@@ -189,7 +189,7 @@ impl Rectangle {
 
 // Enums, Options and Pattern Matching
 #[derive(Debug)] // this is called attribute
-enum IPAddr {
+enum IPAddr_ {
     V4(u8, u8, u8, u8), // this is what's unique about rust
     V6(String),
     V7 { x: u32, y: u32 },
@@ -197,21 +197,21 @@ enum IPAddr {
 
 fn enums_options_pattern_matching() {
     // How to set enum values? - answer below
-    let address1 = IPAddr::V4(127, 0, 0, 1);
+    let address1 = IPAddr_::V4(127, 0, 0, 1);
 
-    let address2 = IPAddr::V6("::1".to_string());
+    let address2 = IPAddr_::V6("::1".to_string());
 
-    let address3 = IPAddr::V7 { x: 10, y: 20 };
+    let address3 = IPAddr_::V7 { x: 10, y: 20 };
 
     println!("{:?}", address1);
     println!("{:?}", address2);
 
     // How to access enum values? - answer below
     match address1 {
-        IPAddr::V4(127, 0, 0, 1) => println!("localhost"),
-        IPAddr::V4(a, b, c, d) => println!("{}.{}.{}.{}", a, b, c, d),
-        IPAddr::V6(s) => println!("{}", s),
-        IPAddr::V7 { x, y } => {
+        IPAddr_::V4(127, 0, 0, 1) => println!("localhost"),
+        IPAddr_::V4(a, b, c, d) => println!("{}.{}.{}.{}", a, b, c, d),
+        IPAddr_::V6(s) => println!("{}", s),
+        IPAddr_::V7 { x, y } => {
             let z = x + y;
             println!("{}", z);
         }

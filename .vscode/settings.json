@@ -1,5 +1,6 @@
 {
     "rust-analyzer.linkedProjects": [
-        "./rust-orderbook/Cargo.toml"
+        "./rust-orderbook/Cargo.toml",
+        "./rust-port-sniffer/ip-sniffer/Cargo.toml"
     ]
 }
